@@ -1,0 +1,18 @@
+/* VARIABLES GLOBALES */
+:root {
+  --color-primary: #7ab6ff;
+  --color-secondary: #23283a;
+  --color-text: #e3eafc;
+  --color-background: #181c24;
+  --color-border: #444b5a;
+  --color-btn-primary: #0A66C2;
+  --color-btn-hover: #084b8a;
+  --color-btn-cancel: #444b5a;
+  --color-btn-cancel-hover: #23283a;
+  --font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-size-base: 16px;
+  --border-radius: 6px;
+  --shadow-light: 0 2px 8px rgba(0,0,0,0.12);
+  --shadow-medium: 0 2px 12px rgba(0,0,0,0.18);
+  --shadow-heavy: 0 4px 24px rgba(0,0,0,0.18);
+}

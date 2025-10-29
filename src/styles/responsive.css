@@ -1,0 +1,15 @@
+/* MEDIA QUERIES - DISEÑO RESPONSIVO */
+@media (max-width: 600px) {
+  .main-header {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+  }
+  section {
+    padding: 1rem;
+    background: var(--color-secondary);
+  }
+  .proyectos-grid {
+    grid-template-columns: 1fr;
+  }
+}

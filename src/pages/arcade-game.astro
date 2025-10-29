@@ -1,0 +1,100 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout>
+    <header class="project-header">
+        <img src="/assets/_DSC0179~2.jpg" alt="Foto de Franco Rigante" class="imagen-perfil">
+        <div>
+            <h1>Franco Rigante</h1>
+            <p class="subtitle">Desarrollo Web | Ciberseguridad | Videojuegos</p>
+            <div class="header-links">
+                <a href="https://www.linkedin.com/in/franco-rigante/" target="_blank">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 32 32"><g><rect width="32" height="32" rx="6" fill="#0A66C2"/><path d="M8.667 12.667h3.2v10.667h-3.2V12.667zm1.6-5.333a1.867 1.867 0 110 3.733 1.867 1.867 0 010-3.733zm4.8 5.333h3.067v1.467h.043c.427-.81 1.47-1.667 3.027-1.667 3.233 0 3.833 2.13 3.833 4.907v6.293h-3.2v-5.6c0-1.333-.027-3.053-1.867-3.053-1.867 0-2.16 1.453-2.16 2.973v5.68h-3.2V12.667z" fill="#fff"/></g></svg>
+                    LinkedIn
+                </a>
+                <a href="https://github.com/FrancoRigante01" target="_blank">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24"><rect width="24" height="24" rx="4" fill="#fff"/><path d="M12 2C6.48 2 2 6.48 2 12c0 4.42 2.87 8.17 6.84 9.49.5.09.68-.22.68-.48 0-.24-.01-.87-.01-1.7-2.78.6-3.37-1.34-3.37-1.34-.45-1.15-1.1-1.46-1.1-1.46-.9-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.89 1.52 2.34 1.08 2.91.83.09-.65.35-1.08.63-1.33-2.22-.25-4.56-1.11-4.56-4.95 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.28.1-2.67 0 0 .84-.27 2.75 1.02a9.56 9.56 0 012.5-.34c.85.004 1.71.12 2.5.34 1.91-1.29 2.75-1.02 2.75-1.02.55 1.39.2 2.42.1 2.67.64.7 1.03 1.59 1.03 2.68 0 3.85-2.34 4.7-4.57 4.95.36.31.68.92.68 1.85 0 1.33-.01 2.4-.01 2.73 0 .27.18.58.69.48A10.01 10.01 0 0022 12c0-5.52-4.48-10-10-10z" fill="#181717"/></svg>
+                    GitHub
+                </a>
+                <a href="https://mariscalchino.itch.io/" target="_blank">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24"><path d="M21 6H3c-1.1 0-2 .9-2 2v8c0 1.1.9 2 2 2h18c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zM11 13H9v2H7v-2H5v-2h2V9h2v2h2v2zm5.5-2c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zM17 13c-.83 0-1.5-.67-1.5-1.5S16.17 10 17 10s1.5.67 1.5 1.5S17.83 13 17 13z" fill="#fff"/></svg>
+                    Itch.io
+                </a>
+            </div>
+        </div>
+    </header>
+    
+    <nav class="main-nav">
+    <a href="/">Inicio</a>
+    <a href="#proyecto">Proyecto</a>
+    </nav>
+
+    <section id="proyecto">
+        <h2>Videojuego Arcade Web</h2>
+        <p>Un videojuego arcade desarrollado como proyecto personal, disponible para jugar directamente en el navegador.</p>
+        
+        <!-- Galería de imágenes -->
+        <div class="project-gallery">
+            <h3>Capturas del proyecto</h3>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="assets/arcade_game/gameplay.gif" alt="Gameplay del videojuego arcade en acción">
+                    <div class="gallery-caption">Gameplay en acción</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="/assets/arcade_game/Captura de pantalla 2025-09-18 212143.png" alt="Captura de pantalla del juego arcade 1">
+                    <div class="gallery-caption">Interfaz de inicio</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="/assets/arcade_game/Captura de pantalla 2025-09-18 212156.png" alt="Captura de pantalla del juego arcade 2">
+                    <div class="gallery-caption">Vista principal del juego</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Características principales -->
+        <h3>Características principales</h3>
+        <div class="project-features">
+            <div class="feature-card">
+                <h4>🎮 Juego Arcade Clásico</h4>
+                <p>Mecánicas divertidas inspiradas en los clásicos juegos arcade</p>
+            </div>
+            <div class="feature-card">
+                <h4>🌐 Tecnologías Web</h4>
+                <p>Desarrollado con tecnologías web modernas para máxima compatibilidad</p>
+            </div>
+            <div class="feature-card">
+                <h4>📱 Interfaz Responsive</h4>
+                <p>Diseño intuitivo que se adapta a cualquier dispositivo</p>
+            </div>
+            <div class="feature-card">
+                <h4>🚀 Publicación Independiente</h4>
+                <p>Disponible en plataformas de juegos independientes</p>
+            </div>
+        </div>
+
+        <!-- Stack tecnológico -->
+        <h3>Tecnologías utilizadas</h3>
+        <div class="tech-stack">
+            <span class="tech-tag">React</span>
+            <span class="tech-tag">TypeScript</span>
+            <span class="tech-tag">HTML5</span>
+            <span class="tech-tag">CSS3</span>
+        </div>
+
+        <!-- Enlaces del proyecto -->
+        <div class="project-links">
+            <a href="https://mariscalchino.itch.io/" target="_blank" class="project-link">
+                🎮 Jugar en Itch.io
+            </a>
+            <a href="https://github.com/FrancoRigante01" target="_blank" class="project-link">
+                📂 Ver código en GitHub
+            </a>
+        </div>
+    </section>
+
+    <footer>
+        <small>© 2025 Franco Rigante</small>
+    </footer>
+</Layout>
