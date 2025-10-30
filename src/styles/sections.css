@@ -18,6 +18,12 @@ section {
   border-radius: 8px;
   padding: 1rem;
   box-shadow: 0 1px 4px rgba(0,0,0,0.18);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.proyecto:hover, .proyecto:focus {
+  transform: translateY(-6px) scale(1.03);
+  box-shadow: 0 6px 24px rgba(122,182,255,0.25), 0 1.5px 8px rgba(0,0,0,0.18);
+  z-index: 2;
 }
 .skills-list {
   display: flex;
@@ -88,6 +94,22 @@ section {
 .contact-form button.btn {
   width: fit-content;
   align-self: flex-start;
+  background: linear-gradient(90deg, var(--color-btn-primary) 0%, #4fc3f7 100%);
+  color: #fff;
+  border: none;
+  border-radius: var(--border-radius);
+  padding: 0.7rem 1.6rem;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  box-shadow: var(--shadow-light);
+  transition: background 0.3s, box-shadow 0.2s, transform 0.2s;
+}
+.contact-form button.btn:hover, .contact-form button.btn:focus {
+  background: linear-gradient(90deg, var(--color-btn-hover) 0%, #1976d2 100%);
+  box-shadow: var(--shadow-medium);
+  transform: translateY(-2px) scale(1.03);
+  outline: none;
 }
 #form-msg {
   margin-top: 0.5rem;
@@ -214,16 +236,19 @@ section {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  background: var(--color-btn-primary);
+  background: linear-gradient(90deg, var(--color-btn-primary) 0%, #4fc3f7 100%);
   color: white;
   padding: 0.8rem 1.5rem;
   border-radius: var(--border-radius);
   text-decoration: none;
   font-weight: 500;
-  transition: background-color 0.3s ease;
+  box-shadow: var(--shadow-light);
+  transition: background 0.3s, box-shadow 0.2s, transform 0.2s;
 }
 
 .project-link:hover {
-  background: var(--color-btn-hover);
+  background: linear-gradient(90deg, var(--color-btn-hover) 0%, #1976d2 100%);
   color: white;
+  box-shadow: var(--shadow-medium);
+  transform: translateY(-2px) scale(1.03);
 }
