@@ -12,3 +12,26 @@ const { links = [
 <nav class="main-nav">
   {links.map(link => <a href={link.href}>{link.text}</a>)}
 </nav>
+
+<style>
+.main-nav {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  background: var(--color-background);
+  padding: 1rem 0;
+  font-size: 1.1rem;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+.main-nav a {
+  color: var(--color-primary);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+.main-nav a:hover {
+  color: var(--color-text);
+}
+</style>

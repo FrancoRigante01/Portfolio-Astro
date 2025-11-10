@@ -120,3 +120,123 @@ import Footer from '../components/Footer.astro';
 <Footer />
         <script src="/assets/functions/mail.js" defer></script>
 </Layout>
+
+<style>
+/* SECCIONES GENERALES, PROYECTOS, HABILIDADES, CONTACTO */
+section {
+  max-width: 800px;
+  margin: 2rem auto;
+  background: var(--color-secondary);
+  border-radius: 12px;
+  box-shadow: var(--shadow-medium);
+  padding: 2rem;
+}
+.proyectos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+.proyecto {
+  background: var(--color-background);
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.18);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.proyecto:hover, .proyecto:focus {
+  transform: translateY(-6px) scale(1.03);
+  box-shadow: 0 6px 24px rgba(122,182,255,0.25), 0 1.5px 8px rgba(0,0,0,0.18);
+  z-index: 2;
+}
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  list-style: none;
+  padding: 0;
+}
+.skills-list li {
+  background: var(--color-background);
+  border-radius: var(--border-radius);
+  padding: 0.5rem 1rem;
+  font-weight: 500;
+  color: var(--color-primary);
+}
+.contact-list {
+  list-style: none;
+  padding: 0;
+}
+.contact-list li {
+  margin-bottom: 0.5rem;
+}
+.contact-form label,
+.contact-form input,
+.contact-form textarea,
+.contact-form button.btn {
+  text-align: left !important;
+  align-self: flex-start !important;
+}
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 400px;
+  margin: 0;
+  padding-left: 1rem;
+  align-items: flex-start;
+  width: 100%;
+  max-width: 100%;
+  padding: 0;
+}
+.contact-form label {
+  font-weight: 500;
+  color: var(--color-primary);
+  margin-bottom: 0.2rem;
+  text-align: left;
+  width: 100%;
+  align-self: flex-start;
+}
+.contact-form input,
+.contact-form textarea {
+  padding: 0.6rem 0.8rem;
+  border-radius: var(--border-radius);
+  border: 1px solid var(--color-border);
+  background: #fff;
+  color: var(--color-secondary);
+  font-size: 1rem;
+  resize: none;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: var(--color-primary);
+}
+.contact-form button.btn {
+  width: fit-content;
+  align-self: flex-start;
+  background: linear-gradient(90deg, var(--color-btn-primary) 0%, #4fc3f7 100%);
+  color: #fff;
+  border: none;
+  border-radius: var(--border-radius);
+  padding: 0.7rem 1.6rem;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  box-shadow: var(--shadow-light);
+  transition: background 0.3s, box-shadow 0.2s, transform 0.2s;
+}
+.contact-form button.btn:hover, .contact-form button.btn:focus {
+  background: linear-gradient(90deg, var(--color-btn-hover) 0%, #1976d2 100%);
+  box-shadow: var(--shadow-medium);
+  transform: translateY(-2px) scale(1.03);
+  outline: none;
+}
+#form-msg {
+  margin-top: 0.5rem;
+  font-size: 1rem;
+}
+</style>
