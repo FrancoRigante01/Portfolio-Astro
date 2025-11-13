@@ -1,0 +1,134 @@
+---
+// Componente para alternar entre modo claro y oscuro
+---
+
+<button id="theme-toggle" class="theme-toggle" aria-label="Cambiar tema">
+  <!-- Icono sol (modo claro) -->
+  <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="12" cy="12" r="5"/>
+    <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/>
+  </svg>
+  
+  <!-- Icono luna (modo oscuro) -->
+  <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+  </svg>
+</button>
+
+<script>
+  // Script inline para prevenir flash en la carga inicial
+  (function() {
+    const savedTheme = localStorage.getItem('theme');
+    const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    
+    let theme;
+    if (savedTheme) {
+      theme = savedTheme;
+    } else {
+      theme = systemPrefersDark ? 'dark' : 'light';
+    }
+    
+    document.documentElement.setAttribute('data-theme', theme);
+  })();
+
+  // Función para cambiar el tema
+  function toggleTheme() {
+    const currentTheme = document.documentElement.getAttribute('data-theme');
+    const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+    
+    document.documentElement.setAttribute('data-theme', newTheme);
+    localStorage.setItem('theme', newTheme);
+    
+    updateToggleButton(newTheme);
+  }
+
+  // Función para actualizar el botón según el tema actual
+  function updateToggleButton(theme) {
+    const button = document.getElementById('theme-toggle');
+    const sunIcon = button?.querySelector('.sun-icon');
+    const moonIcon = button?.querySelector('.moon-icon');
+    
+    if (theme === 'light') {
+      sunIcon?.classList.add('hidden');
+      moonIcon?.classList.remove('hidden');
+    } else {
+      sunIcon?.classList.remove('hidden');
+      moonIcon?.classList.add('hidden');
+    }
+  }
+
+  // Inicializar cuando se carga el DOM
+  document.addEventListener('DOMContentLoaded', () => {
+    const currentTheme = document.documentElement.getAttribute('data-theme');
+    updateToggleButton(currentTheme);
+    
+    // Añadir event listener al botón
+    const toggleButton = document.getElementById('theme-toggle');
+    toggleButton?.addEventListener('click', toggleTheme);
+  });
+</script>
+
+<style>
+  .theme-toggle {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    z-index: 1000;
+    background: var(--color-secondary);
+    border: 2px solid var(--color-border);
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: var(--shadow-medium);
+    color: var(--color-text);
+  }
+
+  .theme-toggle:hover {
+    background: var(--color-primary);
+    transform: scale(1.05);
+    box-shadow: var(--shadow-heavy);
+  }
+
+  .theme-toggle:active {
+    transform: scale(0.95);
+  }
+
+  .theme-toggle svg {
+    transition: opacity 0.3s ease, transform 0.3s ease;
+  }
+
+  .hidden {
+    opacity: 0;
+    transform: scale(0.8);
+    position: absolute;
+  }
+
+  .theme-toggle .sun-icon,
+  .theme-toggle .moon-icon {
+    position: absolute;
+  }
+
+  /* Animación cuando se hace hover */
+  .theme-toggle:hover svg {
+    transform: scale(1.1);
+  }
+
+  @media (max-width: 600px) {
+    .theme-toggle {
+      width: 44px;
+      height: 44px;
+      top: 0.75rem;
+      right: 0.75rem;
+    }
+    
+    .theme-toggle svg {
+      width: 20px;
+      height: 20px;
+    }
+  }
+</style>

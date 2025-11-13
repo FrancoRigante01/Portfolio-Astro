@@ -1,5 +1,6 @@
 /* VARIABLES GLOBALES */
 :root {
+  /* Modo Oscuro (por defecto) */
   --color-primary: #4fc3f7;
   --color-secondary: #181c24;
   --color-text: #f5faff;
@@ -15,4 +16,20 @@
   --shadow-light: 0 2px 8px rgba(0,0,0,0.12);
   --shadow-medium: 0 2px 12px rgba(0,0,0,0.18);
   --shadow-heavy: 0 4px 24px rgba(0,0,0,0.18);
+}
+
+/* Modo Claro */
+:root[data-theme="light"] {
+  --color-primary: #1976d2;
+  --color-secondary: #ffffff;
+  --color-text: #2c3e50;
+  --color-background: #f8f9fa;
+  --color-border: #dee2e6;
+  --color-btn-primary: #0A66C2;
+  --color-btn-hover: #084b8a;
+  --color-btn-cancel: #6c757d;
+  --color-btn-cancel-hover: #5a6268;
+  --shadow-light: 0 2px 8px rgba(0,0,0,0.08);
+  --shadow-medium: 0 2px 12px rgba(0,0,0,0.12);
+  --shadow-heavy: 0 4px 24px rgba(0,0,0,0.15);
 }
