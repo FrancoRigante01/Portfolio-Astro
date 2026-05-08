@@ -16,14 +16,16 @@
 </button>
 
 <script>
+  type Theme = 'light' | 'dark';
+
   // Script inline para prevenir flash en la carga inicial
   (function() {
     const savedTheme = localStorage.getItem('theme');
     const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
     
-    let theme;
+    let theme: Theme;
     if (savedTheme) {
-      theme = savedTheme;
+      theme = savedTheme === 'dark' ? 'dark' : 'light';
     } else {
       theme = systemPrefersDark ? 'dark' : 'light';
     }
@@ -43,7 +45,7 @@
   }
 
   // Función para actualizar el botón según el tema actual
-  function updateToggleButton(theme) {
+  function updateToggleButton(theme: Theme) {
     const button = document.getElementById('theme-toggle');
     const sunIcon = button?.querySelector('.sun-icon');
     const moonIcon = button?.querySelector('.moon-icon');
@@ -59,7 +61,7 @@
 
   // Inicializar cuando se carga el DOM
   document.addEventListener('DOMContentLoaded', () => {
-    const currentTheme = document.documentElement.getAttribute('data-theme');
+    const currentTheme = document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'light';
     updateToggleButton(currentTheme);
     
     // Añadir event listener al botón
