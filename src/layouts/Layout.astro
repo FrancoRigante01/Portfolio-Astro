@@ -3,6 +3,8 @@ import '../styles/variables.css';
 import '../styles/base.css';
 import '../styles/responsive.css';
 import ThemeToggle from '../components/ThemeToggle.astro';
+
+const { title = "Portfolio de Franco Rigante - Desarrollador Web" } = Astro.props;
 ---
 
 <!doctype html>
@@ -11,7 +13,8 @@ import ThemeToggle from '../components/ThemeToggle.astro';
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<meta name="generator" content="Astro" />
-		<title>Portfolio de Franco Rigante - Desarrollador Web</title>
+		<!-- Es recomendable que cada página tenga un título único y descriptivo, por es común usar props en el layout -->
+		<title>{title}</title>
 	</head>
 	<body>
 		<ThemeToggle />

@@ -5,11 +5,11 @@ import Nav from "../components/Nav.astro";
 import Footer from "../components/Footer.astro";
 ---
 
-<Layout>
+<Layout title="Pokémon App - Proyecto de Franco Rigante">
     <Header className="main-header" animate={true} id="inicio" />
     <Nav />
 
-    <section id="proyecto">
+    <section id="proyecto"> <!-- También podría ser un <article> -->
         <h2>Pokémon App</h2>
         <p>
             Esta es una aplicación web interactiva que permite explorar una
@@ -124,6 +124,10 @@ import Footer from "../components/Footer.astro";
 </Layout>
 
 <style>
+  /* section como selector tiene poca especificidad, el contenido de esta pagina podría estar subdividio en secciones, pero se vería afectado por esta clase
+    Un nombre de clase que se podría aplicar para estilos como este puede ser .project-section, .section-container, etc
+    De esa manera se podría aplicar estos estilos a cualquier elemento sin importar la semantica (section, article, div) */
+  */
 section {
   max-width: 800px;
   margin: 2rem auto;

@@ -5,12 +5,21 @@ export interface Props {
   id?: string;
 }
 
+/* No está mal usar una prop para clases de CSS,
+pero una alternativa quizás más clara para casos asi es usar una prop como isProject (boolean),
+y si es true, aplicar las clases específicas para headers de proyectos.
+De esa manera no hace falta que el que lo implementa sepa exactamente que clases usar
+*/
 const { className = "project-header", animate = false, id } = Astro.props;
 ---
 
 <header class={className} id={id}>
+  <!-- Es conveniente, siempre que se pueda, usar el componente Image de Astro -->
+   <!-- Otra recomndación: renombrar los archivos para que se entienda facilmente que son -->
     <img src="/assets/_DSC0179~2.jpg" alt="Foto de Franco Rigante" class={`imagen-perfil ${animate ? 'anim-header' : ''}`}>
     <div class={animate ? 'anim-header' : ''}>
+      <!-- Es recomendable que cada página tenga un h1 diferente.
+       Este puede estar bien para index, pero en Pokemon App, por ejemplo, esto sería mejor como <p> y que haya un <h1>Pokemon App</h1> -->
         <h1>Franco Rigante</h1>
         <p class="subtitle">Desarrollo Web | Ciberseguridad | Videojuegos</p>
         <div class="header-links">
