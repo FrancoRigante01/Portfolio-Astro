@@ -10,6 +10,7 @@ import Footer from '../components/Footer.astro';
 
 <Nav links={[
   { href: "#inicio", text: "Inicio" },
+  { href: "#servicios", text: "Servicios" },
   { href: "#proyectos", text: "Proyectos" },
   { href: "#experiencia", text: "Experiencia" },
   { href: "#habilidades", text: "Habilidades" },
@@ -19,6 +20,34 @@ import Footer from '../components/Footer.astro';
         <section class="bio">
             <h2>Sobre mí</h2>
             <p>Desarrollador de software especializado en tecnologías web. Trabajo principalmente con React y TypeScript, creando aplicaciones, interfaces y funcionalidades que combinan rendimiento, escalabilidad y usabilidad.</p>
+        </section>
+
+        <section id="servicios">
+            <h2>Servicios</h2>
+            <p>Desarrollo de sitios y aplicaciones web a medida, desde la idea inicial hasta el mantenimiento.</p>
+            <div class="servicios-grid">
+                <div class="servicio proyecto">
+                    <h3>Desarrollo de landing pages</h3>
+                    <p>Páginas de presentación rápidas, responsivas y pensadas para convertir visitas en consultas.</p>
+                </div>
+                <div class="servicio proyecto">
+                    <h3>Aplicaciones web con React</h3>
+                    <p>Aplicaciones a medida con React y TypeScript, desde prototipos hasta productos listos para producción.</p>
+                </div>
+                <div class="servicio proyecto">
+                    <h3>Creación y mejora de interfaces</h3>
+                    <p>Diseño e implementación de interfaces claras y funcionales, o rediseño de pantallas existentes para mejorar la experiencia de usuario.</p>
+                </div>
+                <div class="servicio proyecto">
+                    <h3>Corrección de errores y mantenimiento</h3>
+                    <p>Diagnóstico y resolución de bugs, optimización de rendimiento y mantenimiento de proyectos existentes.</p>
+                </div>
+                <div class="servicio proyecto">
+                    <h3>Integración de APIs</h3>
+                    <p>Conexión de tu sitio o aplicación con APIs externas o propias, con manejo de datos y autenticación.</p>
+                </div>
+            </div>
+            <p class="servicios-cta">¿Necesitás algo de esto? <a href="#contacto">Escribime y lo conversamos.</a></p>
         </section>
 
         <section id="experiencia">
@@ -37,7 +66,7 @@ import Footer from '../components/Footer.astro';
             <h2>Formación</h2>
 
             <div class="formacion-item">
-                <h3>Realizador en Artes Electrónicas (tecnicatura)</h3>
+                <h3>Realizador en Artes Electrónicas (Tecnicatura)</h3>
                 <p><strong>Universidad Nacional de Tres de Febrero</strong> (2020 - 2026)</p>
             </div>
 
@@ -124,11 +153,17 @@ section {
   box-shadow: var(--shadow-medium);
   padding: 2rem;
 }
-.proyectos-grid {
+.proyectos-grid,
+.servicios-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 1.5rem;
   margin-top: 1rem;
+}
+.servicios-cta {
+  margin-top: 1.5rem;
+  margin-bottom: 0;
+  text-align: center;
 }
 .proyecto {
   background: var(--color-background);
