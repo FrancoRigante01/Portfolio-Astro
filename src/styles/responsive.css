@@ -2,7 +2,7 @@
 
 /* REGLA GENERAL PARA FORZAR LAYOUT CORRECTO EN DISPOSITIVOS MÓVILES Y TABLETS */
 @media (max-width: 1024px) {
-  .main-header .imagen-perfil, .project-header .imagen-perfil {
+  .main-header .imagen-perfil {
     position: static !important;
     left: auto !important;
     top: auto !important;
@@ -10,7 +10,7 @@
     display: block;
   }
   
-  .main-header, .project-header {
+  .main-header {
     position: relative !important;
   }
 }
@@ -33,7 +33,7 @@
     font-size: 1.1rem;
   }
   
-  .project-header, .main-header {
+  .main-header {
     flex-direction: column;
     gap: 0.8rem;
     text-align: center;
@@ -42,7 +42,7 @@
     position: static;
   }
   
-  .project-header > div, .main-header > div {
+  .main-header > div {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -51,7 +51,7 @@
     order: 2;
   }
   
-  .project-header .imagen-perfil, .main-header .imagen-perfil {
+  .main-header .imagen-perfil {
     position: static !important;
     width: 6rem;
     height: 6rem;
@@ -122,10 +122,6 @@
     gap: 1rem;
   }
   
-  .contact-form {
-    max-width: 100%;
-  }
-  
   .tech-stack {
     justify-content: center;
   }
@@ -142,7 +138,7 @@
 
 /* MÓVILES (481px - 600px) */
 @media (min-width: 481px) and (max-width: 600px) {
-  .project-header, .main-header {
+  .main-header {
     flex-direction: column;
     gap: 1rem;
     text-align: center;
@@ -151,7 +147,7 @@
     position: static;
   }
   
-  .project-header > div, .main-header > div {
+  .main-header > div {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -160,7 +156,7 @@
     order: 2;
   }
   
-  .project-header .imagen-perfil, .main-header .imagen-perfil {
+  .main-header .imagen-perfil {
     position: static !important;
     width: 7rem;
     height: 7rem;
@@ -204,7 +200,7 @@
 
 /* TABLETS VERTICALES (601px - 768px) */
 @media (min-width: 601px) and (max-width: 767px) {
-  .main-header, .project-header {
+  .main-header {
     flex-direction: column;
     gap: 1.8rem;
     padding: 2.5rem 1.5rem;
@@ -213,7 +209,7 @@
     position: relative;
   }
   
-  .main-header .imagen-perfil, .project-header .imagen-perfil {
+  .main-header .imagen-perfil {
     width: 8.5rem;
     height: 8.5rem;
     position: static !important;
@@ -222,7 +218,7 @@
     order: 1;
   }
   
-  .main-header > div, .project-header > div {
+  .main-header > div {
     text-align: center;
     align-items: center;
     width: 100%;
@@ -274,7 +270,7 @@
 
 /* IPAD MINI ESPECÍFICO (768x1024) */
 @media (min-width: 768px) and (max-width: 820px) and (orientation: portrait) {
-  .main-header, .project-header {
+  .main-header {
     flex-direction: column;
     gap: 2rem;
     padding: 3rem 2rem 2rem 2rem;
@@ -284,7 +280,7 @@
     min-height: auto;
   }
   
-  .main-header .imagen-perfil, .project-header .imagen-perfil {
+  .main-header .imagen-perfil {
     width: 9rem;
     height: 9rem;
     position: static !important;
@@ -297,7 +293,7 @@
     transform: none !important;
   }
   
-  .main-header > div, .project-header > div {
+  .main-header > div {
     text-align: center;
     align-items: center;
     width: 100%;
@@ -333,14 +329,14 @@
 
 /* TABLETS HORIZONTALES Y PANTALLAS MEDIANAS (769px - 1024px) */
 @media (min-width: 769px) and (max-width: 1024px) {
-  .main-header, .project-header {
+  .main-header {
     flex-direction: row;
     gap: 2rem;
     padding: 2rem;
     align-items: center;
   }
   
-  .main-header .imagen-perfil, .project-header .imagen-perfil {
+  .main-header .imagen-perfil {
     width: 9rem;
     height: 9rem;
     position: static;
@@ -348,7 +344,7 @@
     flex-shrink: 0;
   }
   
-  .main-header > div, .project-header > div {
+  .main-header > div {
     text-align: left;
     align-items: flex-start;
   }
@@ -381,10 +377,6 @@
   .project-features {
     grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
-  }
-  
-  .contact-form {
-    max-width: 500px;
   }
 }
 
@@ -460,12 +452,12 @@
 
 /* AJUSTES PARA PANTALLAS CON ALTURA LIMITADA (Landscape móviles) */
 @media (max-height: 500px) and (orientation: landscape) {
-  .main-header, .project-header {
+  .main-header {
     padding: 1rem 2rem;
     gap: 1rem;
   }
   
-  .main-header .imagen-perfil, .project-header .imagen-perfil {
+  .main-header .imagen-perfil {
     width: 4rem;
     height: 4rem;
   }
