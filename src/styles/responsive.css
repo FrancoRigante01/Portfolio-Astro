@@ -1,20 +1,5 @@
 /* MEDIA QUERIES - DISEÑO RESPONSIVO */
 
-/* REGLA GENERAL PARA FORZAR LAYOUT CORRECTO EN DISPOSITIVOS MÓVILES Y TABLETS */
-@media (max-width: 1024px) {
-  .main-header .imagen-perfil {
-    position: static !important;
-    left: auto !important;
-    top: auto !important;
-    transform: none !important;
-    display: block;
-  }
-
-  .main-header {
-    position: relative !important;
-  }
-}
-
 /* MÓVILES PEQUEÑOS (hasta 480px) */
 @media (max-width: 480px) {
   body {
@@ -30,47 +15,6 @@
   }
 
   h3 {
-    font-size: 1.1rem;
-  }
-
-  .main-header {
-    flex-direction: column;
-    gap: 0.8rem;
-    text-align: center;
-    align-items: center;
-    padding: 1rem 0.5rem;
-    position: static;
-  }
-
-  .main-header > div {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    order: 2;
-  }
-
-  .main-header .imagen-perfil {
-    position: static !important;
-    width: 6rem;
-    height: 6rem;
-    margin: 0 auto 0.8rem auto;
-    display: block;
-    order: 1;
-  }
-
-  .subtitle {
-    font-size: 1rem;
-  }
-
-  .header-links {
-    flex-direction: column;
-    gap: 1rem;
-    margin-top: 1rem;
-  }
-
-  .header-links a {
     font-size: 1.1rem;
   }
 
@@ -111,33 +55,6 @@
 
 /* MÓVILES (481px - 600px) */
 @media (min-width: 481px) and (max-width: 600px) {
-  .main-header {
-    flex-direction: column;
-    gap: 1rem;
-    text-align: center;
-    align-items: center;
-    padding: 1.5rem 1rem 1rem 1rem;
-    position: static;
-  }
-
-  .main-header > div {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    order: 2;
-  }
-
-  .main-header .imagen-perfil {
-    position: static !important;
-    width: 7rem;
-    height: 7rem;
-    margin: 0 auto 1rem auto;
-    display: block;
-    order: 1;
-  }
-
   section {
     margin: 1.5rem 1rem;
     padding: 1.5rem;
@@ -170,34 +87,6 @@
 
 /* TABLETS VERTICALES (601px - 768px) */
 @media (min-width: 601px) and (max-width: 767px) {
-  .main-header {
-    flex-direction: column;
-    gap: 1.8rem;
-    padding: 2.5rem 1.5rem;
-    text-align: center;
-    align-items: center;
-    position: relative;
-  }
-
-  .main-header .imagen-perfil {
-    width: 8.5rem;
-    height: 8.5rem;
-    position: static !important;
-    margin: 0 auto 1.2rem auto;
-    display: block;
-    order: 1;
-  }
-
-  .main-header > div {
-    text-align: center;
-    align-items: center;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    position: static !important;
-    order: 2;
-  }
-
   section {
     margin: 2rem 1.5rem;
     padding: 1.8rem;
@@ -214,94 +103,23 @@
     gap: 1.5rem;
     justify-content: center;
   }
-
-  .header-links {
-    gap: 2rem;
-    margin-top: 1rem;
-  }
 }
 
 /* IPAD MINI ESPECÍFICO (768x1024) */
 @media (min-width: 768px) and (max-width: 820px) and (orientation: portrait) {
-  .main-header {
-    flex-direction: column;
-    gap: 2rem;
-    padding: 3rem 2rem 2rem 2rem;
-    text-align: center;
-    align-items: center;
-    position: relative;
-    min-height: auto;
-  }
-
-  .main-header .imagen-perfil {
-    width: 9rem;
-    height: 9rem;
-    position: static !important;
-    margin: 0 auto 1.5rem auto;
-    display: block;
-    flex-shrink: 0;
-    order: 1;
-    left: auto !important;
-    top: auto !important;
-    transform: none !important;
-  }
-
-  .main-header > div {
-    text-align: center;
-    align-items: center;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    position: static !important;
-    order: 2;
-  }
-
-  .header-links {
-    margin-top: 1.5rem;
-    gap: 2.5rem;
-    flex-direction: row;
-    justify-content: center;
-  }
-
-  .subtitle {
-    margin-top: 1rem;
-    margin-bottom: 0.8rem;
-    font-size: 1.3rem;
+  section {
+    margin: 2.5rem 2rem;
+    padding: 2.5rem;
   }
 
   h1 {
     font-size: 2.2rem;
     margin-bottom: 0.5rem;
   }
-
-  section {
-    margin: 2.5rem 2rem;
-    padding: 2.5rem;
-  }
 }
 
 /* TABLETS HORIZONTALES Y PANTALLAS MEDIANAS (769px - 1024px) */
 @media (min-width: 769px) and (max-width: 1024px) {
-  .main-header {
-    flex-direction: row;
-    gap: 2rem;
-    padding: 2rem;
-    align-items: center;
-  }
-
-  .main-header .imagen-perfil {
-    width: 9rem;
-    height: 9rem;
-    position: static;
-    margin: 0;
-    flex-shrink: 0;
-  }
-
-  .main-header > div {
-    text-align: left;
-    align-items: flex-start;
-  }
-
   section {
     max-width: 90%;
     margin: 2rem auto;
@@ -314,10 +132,6 @@
   }
 
   .main-nav {
-    gap: 2.5rem;
-  }
-
-  .header-links {
     gap: 2.5rem;
   }
 }
@@ -336,10 +150,6 @@
   }
 
   .main-nav {
-    gap: 3rem;
-  }
-
-  .header-links {
     gap: 3rem;
   }
 }
@@ -364,24 +174,10 @@
   h2 {
     font-size: 2.2rem;
   }
-
-  .subtitle {
-    font-size: 1.4rem;
-  }
 }
 
 /* AJUSTES PARA PANTALLAS CON ALTURA LIMITADA (Landscape móviles) */
 @media (max-height: 500px) and (orientation: landscape) {
-  .main-header {
-    padding: 1rem 2rem;
-    gap: 1rem;
-  }
-
-  .main-header .imagen-perfil {
-    width: 4rem;
-    height: 4rem;
-  }
-
   .main-nav {
     padding: 0.5rem 0;
   }
