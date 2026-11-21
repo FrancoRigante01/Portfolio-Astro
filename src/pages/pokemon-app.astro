@@ -1,265 +1,103 @@
 ---
-import Layout from "../layouts/Layout.astro";
-import Header from "../components/Header.astro";
-import Nav from "../components/Nav.astro";
-import Footer from "../components/Footer.astro";
+import ProjectLayout from "../layouts/ProjectLayout.astro";
+import ProjectGallery from "../components/ProjectGallery.astro";
 ---
 
-<Layout
+<ProjectLayout
     title="Pokémon App | Franco Rigante"
     description="Aplicación web en React y TypeScript para explorar Pokémon con filtros, paginación y autenticación de usuarios."
 >
-    <Header className="main-header" animate={true} id="inicio" />
-    <Nav />
+    <h2>Pokémon App</h2>
+    <p>
+        Esta es una aplicación web interactiva que permite explorar una
+        lista de Pokémon con funcionalidades avanzadas desarrollada con
+        React y TypeScript.
+    </p>
 
-    <section id="proyecto">
-        <h2>Pokémon App</h2>
-        <p>
-            Esta es una aplicación web interactiva que permite explorar una
-            lista de Pokémon con funcionalidades avanzadas desarrollada con
-            React y TypeScript.
-        </p>
+    <ProjectGallery
+        images={[
+            {
+                src: "/assets/pokemon_app/Captura de pantalla 2025-09-18 203531.png",
+                alt: "Vista principal de la aplicación Pokémon",
+                caption: "Vista principal con lista de Pokémon",
+            },
+            {
+                src: "/assets/pokemon_app/Captura de pantalla 2025-09-18 203612.png",
+                alt: "Sistema de filtros de la aplicación",
+                caption: "Sistema de filtros y búsqueda",
+            },
+            {
+                src: "/assets/pokemon_app/Captura de pantalla 2025-09-18 203656.png",
+                alt: "Detalle de Pokémon individual",
+                caption: "Vista detallada de Pokémon",
+            },
+        ]}
+    />
 
-        <!-- Galería de imágenes -->
-        <div class="project-gallery">
-            <h3>Capturas del proyecto</h3>
-            <div class="gallery-grid">
-                <div class="gallery-item">
-                    <img
-                        src="/assets/pokemon_app/Captura de pantalla 2025-09-18 203531.png"
-                        alt="Vista principal de la aplicación Pokémon"
-                    />
-                    <div class="gallery-caption">
-                        Vista principal con lista de Pokémon
-                    </div>
-                </div>
-                <div class="gallery-item">
-                    <img
-                        src="/assets/pokemon_app/Captura de pantalla 2025-09-18 203612.png"
-                        alt="Sistema de filtros de la aplicación"
-                    />
-                    <div class="gallery-caption">
-                        Sistema de filtros y búsqueda
-                    </div>
-                </div>
-                <div class="gallery-item">
-                    <img
-                        src="/assets/pokemon_app/Captura de pantalla 2025-09-18 203656.png"
-                        alt="Detalle de Pokémon individual"
-                    />
-                    <div class="gallery-caption">
-                        Vista detallada de Pokémon
-                    </div>
-                </div>
-            </div>
+    <h3>Características principales</h3>
+    <div class="project-features">
+        <div class="feature-card">
+            <h4>🎮 Interfaz Interactiva</h4>
+            <p>
+                Lista dinámica de Pokémon con navegación fluida y diseño
+                responsive
+            </p>
         </div>
-
-        <!-- Características principales -->
-        <h3>Características principales</h3>
-        <div class="project-features">
-            <div class="feature-card">
-                <h4>🎮 Interfaz Interactiva</h4>
-                <p>
-                    Lista dinámica de Pokémon con navegación fluida y diseño
-                    responsive
-                </p>
-            </div>
-            <div class="feature-card">
-                <h4>🔍 Filtrado Avanzado</h4>
-                <p>
-                    Busca por nombre, tipo, generación y otras características
-                    específicas
-                </p>
-            </div>
-            <div class="feature-card">
-                <h4>📄 Paginación</h4>
-                <p>
-                    Navegación eficiente con sistema de páginas para mejor
-                    rendimiento
-                </p>
-            </div>
-            <div class="feature-card">
-                <h4>🔐 Autenticación</h4>
-                <p>Sistema de usuarios con Firebase Authentication</p>
-            </div>
-            <div class="feature-card">
-                <h4>🚀 Despliegue</h4>
-                <p>Aplicación desplegada en Firebase Hosting con CI/CD</p>
-            </div>
-            <div class="feature-card">
-                <h4>📱 Responsive</h4>
-                <p>Diseño adaptativo que funciona en todos los dispositivos</p>
-            </div>
+        <div class="feature-card">
+            <h4>🔍 Filtrado Avanzado</h4>
+            <p>
+                Busca por nombre, tipo, generación y otras características
+                específicas
+            </p>
         </div>
-
-        <!-- Stack tecnológico -->
-        <h3>Tecnologías utilizadas</h3>
-        <div class="tech-stack">
-            <span class="tech-tag">React</span>
-            <span class="tech-tag">TypeScript</span>
-            <span class="tech-tag">HTML5</span>
-            <span class="tech-tag">CSS3</span>
-            <span class="tech-tag">Firebase</span>
-            <span class="tech-tag">Vite</span>
-            <span class="tech-tag">Git</span>
+        <div class="feature-card">
+            <h4>📄 Paginación</h4>
+            <p>
+                Navegación eficiente con sistema de páginas para mejor
+                rendimiento
+            </p>
         </div>
-
-        <!-- Enlaces del proyecto -->
-        <div class="project-links">
-            <a
-                href="https://pokemon-app-70087.web.app"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="project-link"
-            >
-                🌐 Ver proyecto en vivo
-            </a>
-            <a
-                href="https://github.com/FrancoRigante01/Pokemon-App"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="project-link"
-            >
-                📱 Ver código en GitHub
-            </a>
+        <div class="feature-card">
+            <h4>🔐 Autenticación</h4>
+            <p>Sistema de usuarios con Firebase Authentication</p>
         </div>
-    </section>
+        <div class="feature-card">
+            <h4>🚀 Despliegue</h4>
+            <p>Aplicación desplegada en Firebase Hosting con CI/CD</p>
+        </div>
+        <div class="feature-card">
+            <h4>📱 Responsive</h4>
+            <p>Diseño adaptativo que funciona en todos los dispositivos</p>
+        </div>
+    </div>
 
-    <Footer />
-</Layout>
+    <h3>Tecnologías utilizadas</h3>
+    <div class="tech-stack">
+        <span class="tech-tag">React</span>
+        <span class="tech-tag">TypeScript</span>
+        <span class="tech-tag">HTML5</span>
+        <span class="tech-tag">CSS3</span>
+        <span class="tech-tag">Firebase</span>
+        <span class="tech-tag">Vite</span>
+        <span class="tech-tag">Git</span>
+    </div>
 
-<style>
-section {
-  max-width: 800px;
-  margin: 2rem auto;
-  background: var(--color-secondary);
-  border-radius: 12px;
-  box-shadow: var(--shadow-medium);
-  padding: 2rem;
-}
-
-/* GALERÍA DE IMÁGENES DEL PROYECTO */
-.project-gallery {
-  margin: 2rem 0;
-}
-
-.gallery-grid {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-  margin-top: 1rem;
-}
-
-.gallery-item {
-  position: relative;
-  overflow: hidden;
-  border-radius: var(--border-radius);
-  box-shadow: var(--shadow-medium);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  background: var(--color-background);
-}
-
-.gallery-item:hover {
-  transform: translateY(-5px);
-  box-shadow: var(--shadow-heavy);
-}
-
-.gallery-item img {
-  width: 100%;
-  height: auto;
-  max-height: 400px;
-  object-fit: contain;
-  display: block;
-  transition: transform 0.3s ease;
-}
-
-.gallery-item:hover img {
-  transform: scale(1.02);
-}
-
-.gallery-caption {
-  padding: 0.75rem 1rem;
-  color: var(--color-text);
-  font-size: 0.9rem;
-  text-align: center;
-  background: var(--color-background);
-}
-
-/* CARACTERÍSTICAS DEL PROYECTO */
-.project-features {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1rem;
-  margin: 1.5rem 0;
-}
-
-.feature-card {
-  background: var(--color-background);
-  border-radius: var(--border-radius);
-  padding: 1.5rem;
-  box-shadow: var(--shadow-light);
-  transition: transform 0.2s ease;
-}
-
-.feature-card:hover {
-  transform: translateY(-2px);
-}
-
-.feature-card h4 {
-  color: var(--color-primary);
-  margin-bottom: 0.5rem;
-  font-size: 1.1rem;
-}
-
-.feature-card p {
-  margin: 0;
-  font-size: 0.9rem;
-  line-height: 1.4;
-}
-
-/* TECNOLOGÍAS */
-.tech-stack {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-  margin: 1rem 0;
-}
-
-.tech-tag {
-  background: var(--color-primary);
-  color: var(--color-secondary);
-  padding: 0.3rem 0.8rem;
-  border-radius: 20px;
-  font-size: 0.8rem;
-  font-weight: 500;
-}
-
-/* ENLACES DEL PROYECTO */
-.project-links {
-  display: flex;
-  gap: 1rem;
-  margin: 1.5rem 0;
-  flex-wrap: wrap;
-}
-
-.project-link {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  background: linear-gradient(90deg, var(--color-btn-primary) 0%, #4fc3f7 100%);
-  color: white;
-  padding: 0.8rem 1.5rem;
-  border-radius: var(--border-radius);
-  text-decoration: none;
-  font-weight: 500;
-  box-shadow: var(--shadow-light);
-  transition: background 0.3s, box-shadow 0.2s, transform 0.2s;
-}
-
-.project-link:hover {
-  background: linear-gradient(90deg, var(--color-btn-hover) 0%, #1976d2 100%);
-  color: white;
-  box-shadow: var(--shadow-medium);
-  transform: translateY(-2px) scale(1.03);
-}
-</style>
+    <div class="project-links">
+        <a
+            href="https://pokemon-app-70087.web.app"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="project-link"
+        >
+            🌐 Ver proyecto en vivo
+        </a>
+        <a
+            href="https://github.com/FrancoRigante01/Pokemon-App"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="project-link"
+        >
+            📱 Ver código en GitHub
+        </a>
+    </div>
+</ProjectLayout>

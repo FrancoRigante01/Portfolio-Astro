@@ -1,258 +1,100 @@
 ---
-import Layout from "../layouts/Layout.astro";
-import Header from "../components/Header.astro";
-import Nav from "../components/Nav.astro";
-import Footer from "../components/Footer.astro";
+import ProjectLayout from "../layouts/ProjectLayout.astro";
+import ProjectGallery from "../components/ProjectGallery.astro";
 ---
 
-<Layout
+<ProjectLayout
     title="Hipnos | Franco Rigante"
     description="Hipnos, una aplicación web interactiva para interpretar sueños con reconocimiento de voz, archivo personal y sistema de logros."
 >
-    <Header className="main-header" animate={true} id="inicio" />
-    <Nav />
+    <h2>Hipnos</h2>
+    <p>
+        Una aplicación web artística e interactiva para explorar e interpretar sueños.
+        Inspirada en el dios griego del sueño, esta aplicación te permite narrar tus
+        visiones nocturnas y recibir interpretaciones místicas basadas en simbolismos antiguos.
+    </p>
 
-    <section id="proyecto">
-        <h2>Hipnos</h2>
-        <p>
-            Una aplicación web artística e interactiva para explorar e interpretar sueños. 
-            Inspirada en el dios griego del sueño, esta aplicación te permite narrar tus 
-            visiones nocturnas y recibir interpretaciones místicas basadas en simbolismos antiguos.
-        </p>
+    <ProjectGallery
+        images={[
+            {
+                src: "/assets/hipnos/Captura.PNG",
+                alt: "Interfaz principal de Hipnos para interpretar sueños",
+                caption: "Interfaz principal para interpretar sueños",
+            },
+            {
+                src: "/assets/hipnos/Captura2.PNG",
+                alt: "Galería de logros y arquetipos de Hipnos",
+                caption: "Sistema de logros y colección de arquetipos",
+            },
+        ]}
+    />
 
-        <!-- Galería de imágenes -->
-        <div class="project-gallery">
-            <h3>Capturas del proyecto</h3>
-            <div class="gallery-grid">
-                <div class="gallery-item">
-                    <img
-                        src="/assets/hipnos/Captura.PNG"
-                        alt="Interfaz principal de Hipnos para interpretar sueños"
-                    />
-                    <div class="gallery-caption">
-                        Interfaz principal para interpretar sueños
-                    </div>
-                </div>
-                <div class="gallery-item">
-                    <img
-                        src="/assets/hipnos/Captura2.PNG"
-                        alt="Galería de logros y arquetipos de Hipnos"
-                    />
-                    <div class="gallery-caption">
-                        Sistema de logros y colección de arquetipos
-                    </div>
-                </div>
-            </div>
+    <h3>Características principales</h3>
+    <div class="project-features">
+        <div class="feature-card">
+            <h4>🎤 Reconocimiento de Voz</h4>
+            <p>
+                Narra tus sueños usando tu voz con integración de Deepgram y Web Speech API
+            </p>
         </div>
-
-        <!-- Características principales -->
-        <h3>Características principales</h3>
-        <div class="project-features">
-            <div class="feature-card">
-                <h4>🎤 Reconocimiento de Voz</h4>
-                <p>
-                    Narra tus sueños usando tu voz con integración de Deepgram y Web Speech API
-                </p>
-            </div>
-            <div class="feature-card">
-                <h4>🔮 Interpretación de Sueños</h4>
-                <p>
-                    Análisis automático basado en palabras clave y simbolismos antiguos
-                </p>
-            </div>
-            <div class="feature-card">
-                <h4>📚 Archivo de Sueños</h4>
-                <p>
-                    Guarda y revisa tus interpretaciones anteriores en tu archivo personal
-                </p>
-            </div>
-            <div class="feature-card">
-                <h4>🏆 Sistema de Logros</h4>
-                <p>
-                    Desbloquea logros mientras exploras diferentes arquetipos oníricos
-                </p>
-            </div>
-            <div class="feature-card">
-                <h4>✨ Interfaz Mística</h4>
-                <p>
-                    Diseño inmersivo con animaciones de nubes y efectos de niebla
-                </p>
-            </div>
-            <div class="feature-card">
-                <h4>📱 Diseño Responsivo</h4>
-                <p>
-                    Experiencia optimizada para dispositivos móviles y desktop
-                </p>
-            </div>
+        <div class="feature-card">
+            <h4>🔮 Interpretación de Sueños</h4>
+            <p>
+                Análisis automático basado en palabras clave y simbolismos antiguos
+            </p>
         </div>
-
-        <!-- Stack tecnológico -->
-        <h3>Tecnologías utilizadas</h3>
-        <div class="tech-stack">
-            <span class="tech-tag">Astro</span>
-            <span class="tech-tag">JavaScript</span>
-            <span class="tech-tag">Deepgram SDK</span>
-            <span class="tech-tag">Web Speech API</span>
-            <span class="tech-tag">LocalStorage</span>
-            <span class="tech-tag">CSS3</span>
+        <div class="feature-card">
+            <h4>📚 Archivo de Sueños</h4>
+            <p>
+                Guarda y revisa tus interpretaciones anteriores en tu archivo personal
+            </p>
         </div>
-
-        <!-- Enlaces del proyecto -->
-        <div class="project-links">
-            <a
-                href="https://hipnos.netlify.app/"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="project-link"
-            >
-                🌙 Ver aplicación en vivo
-            </a>
-            <a
-                href="https://github.com/FrancoRigante01/Hipnos"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="project-link"
-            >
-                📂 Ver código en GitHub
-            </a>
+        <div class="feature-card">
+            <h4>🏆 Sistema de Logros</h4>
+            <p>
+                Desbloquea logros mientras exploras diferentes arquetipos oníricos
+            </p>
         </div>
-    </section>
+        <div class="feature-card">
+            <h4>✨ Interfaz Mística</h4>
+            <p>
+                Diseño inmersivo con animaciones de nubes y efectos de niebla
+            </p>
+        </div>
+        <div class="feature-card">
+            <h4>📱 Diseño Responsivo</h4>
+            <p>
+                Experiencia optimizada para dispositivos móviles y desktop
+            </p>
+        </div>
+    </div>
 
-    <Footer />
-</Layout>
+    <h3>Tecnologías utilizadas</h3>
+    <div class="tech-stack">
+        <span class="tech-tag">Astro</span>
+        <span class="tech-tag">JavaScript</span>
+        <span class="tech-tag">Deepgram SDK</span>
+        <span class="tech-tag">Web Speech API</span>
+        <span class="tech-tag">LocalStorage</span>
+        <span class="tech-tag">CSS3</span>
+    </div>
 
-<style>
-section {
-  max-width: 800px;
-  margin: 2rem auto;
-  background: var(--color-secondary);
-  border-radius: 12px;
-  box-shadow: var(--shadow-medium);
-  padding: 2rem;
-}
-
-/* GALERÍA DE IMÁGENES DEL PROYECTO */
-.project-gallery {
-  margin: 2rem 0;
-}
-
-.gallery-grid {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-  margin-top: 1rem;
-}
-
-.gallery-item {
-  position: relative;
-  overflow: hidden;
-  border-radius: var(--border-radius);
-  box-shadow: var(--shadow-medium);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  background: var(--color-background);
-}
-
-.gallery-item:hover {
-  transform: translateY(-5px);
-  box-shadow: var(--shadow-heavy);
-}
-
-.gallery-item img {
-  width: 100%;
-  height: auto;
-  max-height: 400px;
-  object-fit: contain;
-  display: block;
-  transition: transform 0.3s ease;
-}
-
-.gallery-item:hover img {
-  transform: scale(1.02);
-}
-
-.gallery-caption {
-  padding: 0.75rem 1rem;
-  color: var(--color-text);
-  font-size: 0.9rem;
-  text-align: center;
-  background: var(--color-background);
-}
-
-/* CARACTERÍSTICAS DEL PROYECTO */
-.project-features {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1rem;
-  margin: 1.5rem 0;
-}
-
-.feature-card {
-  background: var(--color-background);
-  border-radius: var(--border-radius);
-  padding: 1.5rem;
-  box-shadow: var(--shadow-light);
-  transition: transform 0.2s ease;
-}
-
-.feature-card:hover {
-  transform: translateY(-2px);
-}
-
-.feature-card h4 {
-  color: var(--color-primary);
-  margin-bottom: 0.5rem;
-  font-size: 1.1rem;
-}
-
-.feature-card p {
-  margin: 0;
-  font-size: 0.9rem;
-  line-height: 1.4;
-}
-
-/* TECNOLOGÍAS */
-.tech-stack {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-  margin: 1rem 0;
-}
-
-.tech-tag {
-  background: var(--color-primary);
-  color: var(--color-secondary);
-  padding: 0.3rem 0.8rem;
-  border-radius: 20px;
-  font-size: 0.8rem;
-  font-weight: 500;
-}
-
-/* ENLACES DEL PROYECTO */
-.project-links {
-  display: flex;
-  gap: 1rem;
-  margin: 1.5rem 0;
-  flex-wrap: wrap;
-}
-
-.project-link {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  background: linear-gradient(90deg, var(--color-btn-primary) 0%, #4fc3f7 100%);
-  color: white;
-  padding: 0.8rem 1.5rem;
-  border-radius: var(--border-radius);
-  text-decoration: none;
-  font-weight: 500;
-  box-shadow: var(--shadow-light);
-  transition: background 0.3s, box-shadow 0.2s, transform 0.2s;
-}
-
-.project-link:hover {
-  background: linear-gradient(90deg, var(--color-btn-hover) 0%, #1976d2 100%);
-  color: white;
-  box-shadow: var(--shadow-medium);
-  transform: translateY(-2px) scale(1.03);
-}
-</style>
+    <div class="project-links">
+        <a
+            href="https://hipnos.netlify.app/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="project-link"
+        >
+            🌙 Ver aplicación en vivo
+        </a>
+        <a
+            href="https://github.com/FrancoRigante01/Hipnos"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="project-link"
+        >
+            📂 Ver código en GitHub
+        </a>
+    </div>
+</ProjectLayout>

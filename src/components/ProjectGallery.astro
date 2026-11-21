@@ -1,0 +1,73 @@
+---
+export interface Props {
+	images: Array<{ src: string; alt: string; caption: string }>;
+}
+
+const { images } = Astro.props;
+---
+
+<div class="project-gallery">
+	<h3>Capturas del proyecto</h3>
+	<div class="gallery-grid">
+		{images.map((image) => (
+			<div class="gallery-item">
+				<img src={image.src} alt={image.alt} />
+				<div class="gallery-caption">{image.caption}</div>
+			</div>
+		))}
+	</div>
+</div>
+
+<style>
+.project-gallery {
+  margin: 2rem 0;
+}
+
+.gallery-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-medium);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background: var(--color-background);
+}
+
+.gallery-item:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-heavy);
+}
+
+.gallery-item img {
+  width: 100%;
+  height: auto;
+  max-height: 400px;
+  object-fit: contain;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.02);
+}
+
+.gallery-caption {
+  padding: 0.75rem 1rem;
+  color: var(--color-text);
+  font-size: 0.9rem;
+  text-align: center;
+  background: var(--color-background);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .gallery-item:hover {
+    transform: none;
+  }
+}
+</style>

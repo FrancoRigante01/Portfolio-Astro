@@ -9,7 +9,7 @@
     transform: none !important;
     display: block;
   }
-  
+
   .main-header {
     position: relative !important;
   }
@@ -20,19 +20,19 @@
   body {
     font-size: 14px;
   }
-  
+
   h1 {
     font-size: 1.8rem;
   }
-  
+
   h2 {
     font-size: 1.5rem;
   }
-  
+
   h3 {
     font-size: 1.1rem;
   }
-  
+
   .main-header {
     flex-direction: column;
     gap: 0.8rem;
@@ -41,7 +41,7 @@
     padding: 1rem 0.5rem;
     position: static;
   }
-  
+
   .main-header > div {
     display: flex;
     flex-direction: column;
@@ -50,7 +50,7 @@
     width: 100%;
     order: 2;
   }
-  
+
   .main-header .imagen-perfil {
     position: static !important;
     width: 6rem;
@@ -59,39 +59,39 @@
     display: block;
     order: 1;
   }
-  
+
   .subtitle {
     font-size: 1rem;
   }
-  
+
   .header-links {
     flex-direction: column;
     gap: 1rem;
     margin-top: 1rem;
   }
-  
+
   .header-links a {
     font-size: 1.1rem;
   }
-  
+
   section {
     margin: 1rem 0.5rem;
     padding: 1rem 0.8rem;
     border-radius: 8px;
   }
-  
+
   section h2, section h3 {
     font-size: 1.2rem;
     text-align: center;
     margin-bottom: 0.8rem;
     margin-top: 0.5rem;
   }
-  
+
   .proyectos-grid {
     grid-template-columns: 1fr;
     gap: 1rem;
   }
-  
+
   .main-nav {
     flex-wrap: wrap;
     gap: 0.5rem 1rem;
@@ -99,37 +99,13 @@
     font-size: 0.9rem;
     position: static;
   }
-  
+
   .main-nav a {
     padding: 0.25rem 0;
   }
-  
-  .project-links {
-    flex-direction: column;
-    gap: 0.8rem;
-  }
-  
-  .project-link {
-    padding: 0.8rem 1rem;
-    font-size: 0.9rem;
-    text-align: center;
-  }
-  
-  .gallery-grid {
-    gap: 1rem;
-  }
-  
-  .tech-stack {
-    justify-content: center;
-  }
-  
+
   .skills-list {
     justify-content: center;
-  }
-  
-  .project-features {
-    grid-template-columns: 1fr;
-    gap: 1rem;
   }
 }
 
@@ -143,7 +119,7 @@
     padding: 1.5rem 1rem 1rem 1rem;
     position: static;
   }
-  
+
   .main-header > div {
     display: flex;
     flex-direction: column;
@@ -152,7 +128,7 @@
     width: 100%;
     order: 2;
   }
-  
+
   .main-header .imagen-perfil {
     position: static !important;
     width: 7rem;
@@ -161,24 +137,24 @@
     display: block;
     order: 1;
   }
-  
+
   section {
     margin: 1.5rem 1rem;
     padding: 1.5rem;
   }
-  
+
   section h2, section h3 {
     font-size: 1.3rem;
     text-align: center;
     margin-bottom: 1rem;
     margin-top: 0.5rem;
   }
-  
+
   .proyectos-grid {
     grid-template-columns: 1fr;
     gap: 1.5rem;
   }
-  
+
   .main-nav {
     flex-wrap: wrap;
     gap: 0.5rem 1rem;
@@ -186,7 +162,7 @@
     font-size: 0.95rem;
     position: static;
   }
-  
+
   .main-nav a {
     padding: 0.25rem 0;
   }
@@ -202,7 +178,7 @@
     align-items: center;
     position: relative;
   }
-  
+
   .main-header .imagen-perfil {
     width: 8.5rem;
     height: 8.5rem;
@@ -211,7 +187,7 @@
     display: block;
     order: 1;
   }
-  
+
   .main-header > div {
     text-align: center;
     align-items: center;
@@ -221,44 +197,27 @@
     position: static !important;
     order: 2;
   }
-  
+
   section {
     margin: 2rem 1.5rem;
     padding: 1.8rem;
   }
-  
+
   .proyectos-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 1.5rem;
   }
-  
+
   .main-nav {
     flex-direction: row;
     flex-wrap: wrap;
     gap: 1.5rem;
     justify-content: center;
   }
-  
+
   .header-links {
     gap: 2rem;
     margin-top: 1rem;
-  }
-  
-  .project-links {
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 1rem;
-  }
-  
-  .gallery-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1.5rem;
-  }
-  
-  .project-features {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1.5rem;
   }
 }
 
@@ -273,7 +232,7 @@
     position: relative;
     min-height: auto;
   }
-  
+
   .main-header .imagen-perfil {
     width: 9rem;
     height: 9rem;
@@ -286,7 +245,7 @@
     top: auto !important;
     transform: none !important;
   }
-  
+
   .main-header > div {
     text-align: center;
     align-items: center;
@@ -296,25 +255,25 @@
     position: static !important;
     order: 2;
   }
-  
+
   .header-links {
     margin-top: 1.5rem;
     gap: 2.5rem;
     flex-direction: row;
     justify-content: center;
   }
-  
+
   .subtitle {
     margin-top: 1rem;
     margin-bottom: 0.8rem;
     font-size: 1.3rem;
   }
-  
+
   h1 {
     font-size: 2.2rem;
     margin-bottom: 0.5rem;
   }
-  
+
   section {
     margin: 2.5rem 2rem;
     padding: 2.5rem;
@@ -329,7 +288,7 @@
     padding: 2rem;
     align-items: center;
   }
-  
+
   .main-header .imagen-perfil {
     width: 9rem;
     height: 9rem;
@@ -337,40 +296,29 @@
     margin: 0;
     flex-shrink: 0;
   }
-  
+
   .main-header > div {
     text-align: left;
     align-items: flex-start;
   }
-  
+
   section {
     max-width: 90%;
     margin: 2rem auto;
     padding: 2rem;
   }
-  
+
   .proyectos-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
   }
-  
+
   .main-nav {
     gap: 2.5rem;
   }
-  
+
   .header-links {
     gap: 2.5rem;
-  }
-  
-  .gallery-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 2rem;
-  }
-  
-  .project-features {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 2rem;
   }
 }
 
@@ -381,27 +329,16 @@
     margin: 2.5rem auto;
     padding: 2.5rem;
   }
-  
+
   .proyectos-grid {
     grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
   }
-  
-  .gallery-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
-  }
-  
-  .project-features {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
-  }
-  
+
   .main-nav {
     gap: 3rem;
   }
-  
+
   .header-links {
     gap: 3rem;
   }
@@ -414,31 +351,20 @@
     margin: 3rem auto;
     padding: 3rem;
   }
-  
+
   .proyectos-grid {
     grid-template-columns: repeat(3, 1fr);
     gap: 2.5rem;
   }
-  
-  .gallery-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2.5rem;
-  }
-  
-  .project-features {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2.5rem;
-  }
-  
+
   h1 {
     font-size: 3rem;
   }
-  
+
   h2 {
     font-size: 2.2rem;
   }
-  
+
   .subtitle {
     font-size: 1.4rem;
   }
@@ -450,16 +376,16 @@
     padding: 1rem 2rem;
     gap: 1rem;
   }
-  
+
   .main-header .imagen-perfil {
     width: 4rem;
     height: 4rem;
   }
-  
+
   .main-nav {
     padding: 0.5rem 0;
   }
-  
+
   section {
     margin: 1rem auto;
     padding: 1.5rem;
@@ -473,10 +399,8 @@
     opacity: 1;
     transform: none;
   }
-  
-  .proyecto:hover, 
-  .gallery-item:hover,
-  .project-link:hover {
+
+  .proyecto:hover {
     transform: none;
   }
 }

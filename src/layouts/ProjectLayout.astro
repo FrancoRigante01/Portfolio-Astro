@@ -1,0 +1,25 @@
+---
+import Layout from './Layout.astro';
+import Header from '../components/Header.astro';
+import Nav from '../components/Nav.astro';
+import Footer from '../components/Footer.astro';
+import '../styles/project.css';
+
+export interface Props {
+	title: string;
+	description: string;
+}
+
+const { title, description } = Astro.props;
+---
+
+<Layout title={title} description={description}>
+	<Header className="main-header" animate={true} id="inicio" />
+	<Nav />
+
+	<section id="proyecto" class="project-section">
+		<slot />
+	</section>
+
+	<Footer />
+</Layout>
