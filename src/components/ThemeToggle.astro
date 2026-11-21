@@ -18,21 +18,6 @@
 <script>
   type Theme = 'light' | 'dark';
 
-  // Script inline para prevenir flash en la carga inicial
-  (function() {
-    const savedTheme = localStorage.getItem('theme');
-    const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    
-    let theme: Theme;
-    if (savedTheme) {
-      theme = savedTheme === 'dark' ? 'dark' : 'light';
-    } else {
-      theme = systemPrefersDark ? 'dark' : 'light';
-    }
-    
-    document.documentElement.setAttribute('data-theme', theme);
-  })();
-
   // Función para cambiar el tema
   function toggleTheme() {
     const currentTheme = document.documentElement.getAttribute('data-theme');
