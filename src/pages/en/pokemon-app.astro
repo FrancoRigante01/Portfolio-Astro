@@ -1,0 +1,105 @@
+---
+import ProjectLayout from "../../layouts/ProjectLayout.astro";
+import ProjectGallery from "../../components/ProjectGallery.astro";
+---
+
+<ProjectLayout
+    lang="en"
+    title="Pokémon App | Franco Rigante"
+    description="Web application built with React and TypeScript to explore Pokémon with filters, pagination and user authentication."
+>
+    <h2>Pokémon App</h2>
+    <p>
+        This is an interactive web application that lets you explore a
+        list of Pokémon with advanced features, built with React and
+        TypeScript.
+    </p>
+
+    <ProjectGallery
+        heading="Project screenshots"
+        images={[
+            {
+                src: "/assets/pokemon_app/Captura de pantalla 2025-09-18 203531.png",
+                alt: "Main view of the Pokémon application",
+                caption: "Main view with the Pokémon list",
+            },
+            {
+                src: "/assets/pokemon_app/Captura de pantalla 2025-09-18 203612.png",
+                alt: "Filter system of the application",
+                caption: "Filter and search system",
+            },
+            {
+                src: "/assets/pokemon_app/Captura de pantalla 2025-09-18 203656.png",
+                alt: "Detail view of an individual Pokémon",
+                caption: "Detailed Pokémon view",
+            },
+        ]}
+    />
+
+    <h3>Main features</h3>
+    <div class="project-features">
+        <div class="feature-card">
+            <h4>🎮 Interactive Interface</h4>
+            <p>
+                Dynamic Pokémon list with smooth navigation and responsive
+                design
+            </p>
+        </div>
+        <div class="feature-card">
+            <h4>🔍 Advanced Filtering</h4>
+            <p>
+                Search by name, type, generation and other specific
+                attributes
+            </p>
+        </div>
+        <div class="feature-card">
+            <h4>📄 Pagination</h4>
+            <p>
+                Efficient navigation with a page system for better
+                performance
+            </p>
+        </div>
+        <div class="feature-card">
+            <h4>🔐 Authentication</h4>
+            <p>User authentication powered by Firebase Authentication</p>
+        </div>
+        <div class="feature-card">
+            <h4>🚀 Deployment</h4>
+            <p>Application deployed on Firebase Hosting with CI/CD</p>
+        </div>
+        <div class="feature-card">
+            <h4>📱 Responsive design</h4>
+            <p>Adaptive design that works on all devices</p>
+        </div>
+    </div>
+
+    <h3>Technologies used</h3>
+    <div class="tech-stack">
+        <span class="tech-tag">React</span>
+        <span class="tech-tag">TypeScript</span>
+        <span class="tech-tag">HTML5</span>
+        <span class="tech-tag">CSS3</span>
+        <span class="tech-tag">Firebase</span>
+        <span class="tech-tag">Vite</span>
+        <span class="tech-tag">Git</span>
+    </div>
+
+    <div class="project-links">
+        <a
+            href="https://pokemon-app-70087.web.app"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="project-link"
+        >
+            🌐 View live project
+        </a>
+        <a
+            href="https://github.com/FrancoRigante01/Pokemon-App"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="project-link"
+        >
+            📱 View code on GitHub
+        </a>
+    </div>
+</ProjectLayout>

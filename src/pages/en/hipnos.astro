@@ -1,0 +1,106 @@
+---
+import ProjectLayout from "../../layouts/ProjectLayout.astro";
+import ProjectGallery from "../../components/ProjectGallery.astro";
+---
+
+<ProjectLayout
+    lang="en"
+    title="Hipnos | Franco Rigante"
+    description="Hipnos, an interactive web application for interpreting dreams with voice recognition, a personal archive and an achievement system."
+>
+    <h2>Hipnos</h2>
+    <p>
+        An artistic and interactive web application for exploring and
+        interpreting dreams. Inspired by the Greek god of sleep, this
+        application lets you narrate your nightly visions and receive
+        mystical interpretations based on ancient symbolism.
+    </p>
+
+    <ProjectGallery
+        heading="Project screenshots"
+        images={[
+            {
+                src: "/assets/hipnos/Captura.PNG",
+                alt: "Main interface of Hipnos for interpreting dreams",
+                caption: "Main interface for interpreting dreams",
+            },
+            {
+                src: "/assets/hipnos/Captura2.PNG",
+                alt: "Achievement and archetype gallery of Hipnos",
+                caption: "Achievement system and archetype collection",
+            },
+        ]}
+    />
+
+    <h3>Main features</h3>
+    <div class="project-features">
+        <div class="feature-card">
+            <h4>🎤 Voice Recognition</h4>
+            <p>
+                Narrate your dreams with your voice, using Deepgram and Web
+                Speech API integration
+            </p>
+        </div>
+        <div class="feature-card">
+            <h4>🔮 Dream Interpretation</h4>
+            <p>
+                Automatic analysis based on keywords and ancient symbolism
+            </p>
+        </div>
+        <div class="feature-card">
+            <h4>📚 Dream Archive</h4>
+            <p>
+                Save and review your past interpretations in your personal
+                archive
+            </p>
+        </div>
+        <div class="feature-card">
+            <h4>🏆 Achievement System</h4>
+            <p>
+                Unlock achievements while exploring different dream
+                archetypes
+            </p>
+        </div>
+        <div class="feature-card">
+            <h4>✨ Mystical Interface</h4>
+            <p>
+                Immersive design with cloud animations and mist effects
+            </p>
+        </div>
+        <div class="feature-card">
+            <h4>📱 Responsive Design</h4>
+            <p>
+                Experience optimized for mobile and desktop devices
+            </p>
+        </div>
+    </div>
+
+    <h3>Technologies used</h3>
+    <div class="tech-stack">
+        <span class="tech-tag">Astro</span>
+        <span class="tech-tag">JavaScript</span>
+        <span class="tech-tag">Deepgram SDK</span>
+        <span class="tech-tag">Web Speech API</span>
+        <span class="tech-tag">LocalStorage</span>
+        <span class="tech-tag">CSS3</span>
+    </div>
+
+    <div class="project-links">
+        <a
+            href="https://hipnos.netlify.app/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="project-link"
+        >
+            🌙 View live application
+        </a>
+        <a
+            href="https://github.com/FrancoRigante01/Hipnos"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="project-link"
+        >
+            📂 View code on GitHub
+        </a>
+    </div>
+</ProjectLayout>

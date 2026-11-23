@@ -3,20 +3,26 @@ import '../styles/variables.css';
 import '../styles/base.css';
 import '../styles/responsive.css';
 import ThemeToggle from '../components/ThemeToggle.astro';
+import LanguageSwitcher from '../components/LanguageSwitcher.astro';
+import { ui, type Lang } from '../i18n/ui';
 
 export interface Props {
 	title?: string;
 	description?: string;
+	lang?: Lang;
+	showLanguageSwitcher?: boolean;
 }
 
 const {
-	title = 'Franco Rigante | Desarrollador de Software',
-	description = 'Portfolio de Franco Rigante, desarrollador de software especializado en React, TypeScript y tecnologías web.',
+	lang = 'es',
+	title = ui[lang].title,
+	description = ui[lang].description,
+	showLanguageSwitcher = false,
 } = Astro.props;
 ---
 
 <!doctype html>
-<html lang="es">
+<html lang={lang}>
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -35,6 +41,7 @@ const {
 	</head>
 	<body>
 		<ThemeToggle />
+		{showLanguageSwitcher && <LanguageSwitcher lang={lang} />}
 		<slot />
 	</body>
 </html>

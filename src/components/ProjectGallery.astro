@@ -1,13 +1,14 @@
 ---
 export interface Props {
 	images: Array<{ src: string; alt: string; caption: string }>;
+	heading?: string;
 }
 
-const { images } = Astro.props;
+const { images, heading = 'Capturas del proyecto' } = Astro.props;
 ---
 
 <div class="project-gallery">
-	<h3>Capturas del proyecto</h3>
+	<h3>{heading}</h3>
 	<div class="gallery-grid">
 		{images.map((image) => (
 			<div class="gallery-item">

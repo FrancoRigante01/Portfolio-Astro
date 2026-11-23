@@ -4,18 +4,25 @@ import Header from '../components/Header.astro';
 import Nav from '../components/Nav.astro';
 import Footer from '../components/Footer.astro';
 import '../styles/project.css';
+import { ui, type Lang } from '../i18n/ui';
 
 export interface Props {
 	title: string;
 	description: string;
+	lang?: Lang;
 }
 
-const { title, description } = Astro.props;
+const { title, description, lang = 'es' } = Astro.props;
+const t = ui[lang];
+const homeHref = lang === 'es' ? '/' : '/en/';
 ---
 
-<Layout title={title} description={description}>
-	<Header className="main-header" animate={true} id="inicio" />
-	<Nav />
+<Layout title={title} description={description} lang={lang} showLanguageSwitcher={true}>
+	<Header className="main-header" animate={true} id="inicio" subtitle={t.subtitle} photoAlt={t.photoAlt} />
+	<Nav links={[
+		{ href: homeHref, text: t.nav.home },
+		{ href: "#proyecto", text: t.nav.project }
+	]} />
 
 	<section id="proyecto" class="project-section">
 		<slot />
