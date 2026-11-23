@@ -11,6 +11,7 @@ export interface Props {
 const { lang } = Astro.props;
 const t = ui[lang];
 const cvHref = lang === 'en' ? '/CV-Franco-Rigante-EN.pdf' : '/CV-Franco-Rigante.pdf';
+const base = lang === 'es' ? '' : '/en';
 ---
 
 <Header className="main-header" animate={true} id="inicio" subtitle={t.subtitle} photoAlt={t.photoAlt} />
@@ -79,15 +80,15 @@ const cvHref = lang === 'en' ? '/CV-Franco-Rigante-EN.pdf' : '/CV-Franco-Rigante
             <h2>{t.projects.heading}</h2>
             <div class="proyectos-grid">
                 <div class="proyecto">
-                    <h3><a href="/pokemon-app">{t.projects.pokemon.title}</a></h3>
+                    <h3><a href={`${base}/pokemon-app`}>{t.projects.pokemon.title}</a></h3>
                     <p>{t.projects.pokemon.text} <a href="https://pokemon-app-70087.web.app" target="_blank" rel="noopener noreferrer">{t.projects.viewProject}</a></p>
                 </div>
                 <div class="proyecto">
-                    <h3><a href="/hipnos">{t.projects.hipnos.title}</a></h3>
+                    <h3><a href={`${base}/hipnos`}>{t.projects.hipnos.title}</a></h3>
                     <p>{t.projects.hipnos.text} <a href="https://hipnos.netlify.app/" target="_blank" rel="noopener noreferrer">{t.projects.viewProject}</a></p>
                 </div>
                 <div class="proyecto">
-                    <h3><a href="/arcade-game">{t.projects.games.title}</a></h3>
+                    <h3><a href={`${base}/arcade-game`}>{t.projects.games.title}</a></h3>
                     <p>{t.projects.games.text} <a href="https://mariscalchino.itch.io/" target="_blank" rel="noopener noreferrer">{t.projects.viewProfile}</a></p>
                 </div>
             </div>
@@ -135,7 +136,6 @@ const cvHref = lang === 'en' ? '/CV-Franco-Rigante-EN.pdf' : '/CV-Franco-Rigante
         </section>
 
 <Footer />
-        <script src="/assets/functions/mail.js" defer></script>
 
 <style>
 /* SECCIONES GENERALES, PROYECTOS, HABILIDADES, CONTACTO */

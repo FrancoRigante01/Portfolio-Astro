@@ -82,6 +82,7 @@ const es = {
     heading: 'Contacto',
     text: 'Podés contactarme por correo electrónico:',
   },
+  backToTop: 'Volver arriba',
   languageSwitch: {
     label: 'Cambiar a inglés',
     text: 'EN',
@@ -172,6 +173,7 @@ const en: typeof es = {
     heading: 'Contact',
     text: 'You can reach me by email:',
   },
+  backToTop: 'Back to top',
   languageSwitch: {
     label: 'Switch to Spanish',
     text: 'ES',

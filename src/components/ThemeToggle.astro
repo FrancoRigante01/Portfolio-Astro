@@ -46,15 +46,26 @@
     }
   }
 
-  // Inicializar cuando se carga el DOM
-  document.addEventListener('DOMContentLoaded', () => {
+  // Inicializar en cada carga de página (incluye navegaciones con ClientRouter)
+  function initThemeToggle() {
+    if (!document.documentElement.getAttribute('data-theme')) {
+      const savedTheme = localStorage.getItem('theme');
+      const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      const theme = savedTheme ? (savedTheme === 'dark' ? 'dark' : 'light') : (systemPrefersDark ? 'dark' : 'light');
+      document.documentElement.setAttribute('data-theme', theme);
+    }
+
     const currentTheme = document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'light';
     updateToggleButton(currentTheme);
-    
-    // Añadir event listener al botón
+
     const toggleButton = document.getElementById('theme-toggle');
-    toggleButton?.addEventListener('click', toggleTheme);
-  });
+    if (toggleButton && !toggleButton.dataset.bound) {
+      toggleButton.dataset.bound = 'true';
+      toggleButton.addEventListener('click', toggleTheme);
+    }
+  }
+
+  document.addEventListener('astro:page-load', initThemeToggle);
 </script>
 
 <style>

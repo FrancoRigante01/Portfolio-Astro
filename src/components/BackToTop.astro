@@ -1,0 +1,93 @@
+---
+import { ui, type Lang } from '../i18n/ui';
+
+export interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props;
+const t = ui[lang];
+---
+
+<button id="back-to-top" class="back-to-top" type="button" aria-label={t.backToTop} title={t.backToTop}>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+    <path d="M12 19V5M5 12l7-7 7 7"/>
+  </svg>
+</button>
+
+<script>
+  const SHOW_AFTER_PX = 300;
+
+  function updateVisibility() {
+    const button = document.getElementById('back-to-top');
+    button?.classList.toggle('visible', window.scrollY > SHOW_AFTER_PX);
+  }
+
+  window.addEventListener('scroll', updateVisibility, { passive: true });
+
+  document.addEventListener('click', (event) => {
+    const target = event.target as Element | null;
+    if (!target?.closest('#back-to-top')) return;
+    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    window.scrollTo({ top: 0, behavior: reduceMotion ? 'auto' : 'smooth' });
+  });
+
+  document.addEventListener('astro:page-load', updateVisibility);
+</script>
+
+<style>
+  .back-to-top {
+    position: fixed;
+    bottom: 1.5rem;
+    right: 1.5rem;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    background: var(--color-secondary);
+    border: 2px solid var(--color-border);
+    border-radius: 50%;
+    box-shadow: var(--shadow-medium);
+    color: var(--color-text);
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    pointer-events: none;
+    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s, background 0.3s ease;
+  }
+
+  .back-to-top.visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+
+  @media (hover: hover) {
+    .back-to-top:hover {
+      background: var(--color-primary);
+      box-shadow: var(--shadow-heavy);
+    }
+  }
+
+  .back-to-top:active {
+    transform: scale(0.95);
+  }
+
+  .back-to-top svg {
+    width: 22px;
+    height: 22px;
+  }
+
+  @media (max-width: 480px) {
+    .back-to-top {
+      width: 44px;
+      height: 44px;
+      bottom: 1rem;
+      right: 1rem;
+    }
+  }
+</style>

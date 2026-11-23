@@ -1,5 +1,5 @@
 // Protege el mail contra bots ensamblando el correo con JS
-document.addEventListener('DOMContentLoaded', function() {
+function setMailLink() {
     const user = 'francorigante01';
     const domain = 'gmail.com';
     const mail = user + '@' + domain;
@@ -8,4 +8,6 @@ document.addEventListener('DOMContentLoaded', function() {
         link.textContent = mail;
         link.href = 'mailto:' + mail;
     }
-});
+}
+
+document.addEventListener('astro:page-load', setMailLink);

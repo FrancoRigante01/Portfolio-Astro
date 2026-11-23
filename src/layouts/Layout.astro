@@ -2,8 +2,10 @@
 import '../styles/variables.css';
 import '../styles/base.css';
 import '../styles/responsive.css';
+import { ClientRouter } from 'astro:transitions';
 import ThemeToggle from '../components/ThemeToggle.astro';
 import LanguageSwitcher from '../components/LanguageSwitcher.astro';
+import BackToTop from '../components/BackToTop.astro';
 import { ui, type Lang } from '../i18n/ui';
 
 export interface Props {
@@ -28,6 +30,7 @@ const {
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<meta name="generator" content="Astro" />
 		<link rel="icon" href="data:," />
+		<ClientRouter />
 		<title>{title}</title>
 		<meta name="description" content={description} />
 		<script is:inline>
@@ -42,7 +45,9 @@ const {
 	<body>
 		<ThemeToggle />
 		{showLanguageSwitcher && <LanguageSwitcher lang={lang} />}
+		<BackToTop lang={lang} />
 		<slot />
+		<script src="/assets/functions/mail.js" defer></script>
 	</body>
 </html>
 
@@ -51,5 +56,14 @@ const {
 	body {
 		margin: 0;
 		width: 100%;
+	}
+</style>
+
+<style is:global>
+	@media (prefers-reduced-motion: reduce) {
+		::view-transition-old(root),
+		::view-transition-new(root) {
+			animation: none;
+		}
 	}
 </style>
