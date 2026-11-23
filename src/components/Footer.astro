@@ -1,6 +1,11 @@
 <footer>
-    <small>© {new Date().getFullYear()} Franco Rigante</small>
+    <small>© <span id="footer-year">{new Date().getFullYear()}</span> Franco Rigante</small>
 </footer>
+
+<script>
+    const year = document.getElementById('footer-year');
+    if (year) year.textContent = String(new Date().getFullYear());
+</script>
 
 <style>
 footer {
