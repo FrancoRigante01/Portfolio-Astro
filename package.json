@@ -9,6 +9,7 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^5.15.1"
+    "astro": "^7.4.13",
+    "cookie": "2.0.2"
   }
 }

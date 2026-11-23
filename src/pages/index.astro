@@ -147,18 +147,20 @@ import Footer from '../components/Footer.astro';
 <style>
 /* SECCIONES GENERALES, PROYECTOS, HABILIDADES, CONTACTO */
 section {
+  box-sizing: border-box;
+  width: calc(100% - 2rem);
   max-width: 800px;
   margin: 2rem auto;
   background: var(--color-secondary);
   border-radius: 12px;
   box-shadow: var(--shadow-medium);
-  padding: 2rem;
+  padding: clamp(1.25rem, 4vw, 2rem);
 }
 .proyectos-grid,
 .servicios-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(min(220px, 100%), 1fr));
+  gap: clamp(1rem, 3vw, 1.5rem);
   margin-top: 1rem;
 }
 .servicios-cta {
@@ -173,10 +175,22 @@ section {
   box-shadow: 0 1px 4px rgba(0,0,0,0.18);
   transition: transform 0.2s, box-shadow 0.2s;
 }
-.proyecto:hover, .proyecto:focus {
+@media (hover: hover) {
+  .proyecto:hover {
+    transform: translateY(-6px) scale(1.03);
+    box-shadow: 0 6px 24px rgba(122,182,255,0.25), 0 1.5px 8px rgba(0,0,0,0.18);
+    z-index: 2;
+  }
+}
+.proyecto:has(:focus-visible) {
   transform: translateY(-6px) scale(1.03);
   box-shadow: 0 6px 24px rgba(122,182,255,0.25), 0 1.5px 8px rgba(0,0,0,0.18);
   z-index: 2;
+}
+@media (prefers-reduced-motion: reduce) {
+  .proyecto:hover, .proyecto:has(:focus-visible) {
+    transform: none;
+  }
 }
 .skills-group {
   margin-bottom: 1.5rem;
@@ -201,5 +215,26 @@ section {
   padding: 0.5rem 1rem;
   font-weight: 500;
   color: var(--color-primary);
+}
+
+@media (min-width: 1280px) {
+  section {
+    max-width: 1000px;
+    margin: 3rem auto;
+    padding: 3rem;
+  }
+}
+@media (max-height: 500px) and (orientation: landscape) {
+  section {
+    margin: 1rem auto;
+    padding: 1.5rem;
+  }
+}
+@media (max-width: 480px) {
+  section h2, section h3 {
+    text-align: center;
+    margin-top: 0.5rem;
+    margin-bottom: 0.8rem;
+  }
 }
 </style>

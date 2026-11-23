@@ -75,10 +75,12 @@
     color: var(--color-text);
   }
 
-  .theme-toggle:hover {
-    background: var(--color-primary);
-    transform: scale(1.05);
-    box-shadow: var(--shadow-heavy);
+  @media (hover: hover) {
+    .theme-toggle:hover {
+      background: var(--color-primary);
+      transform: scale(1.05);
+      box-shadow: var(--shadow-heavy);
+    }
   }
 
   .theme-toggle:active {
@@ -101,11 +103,13 @@
   }
 
   /* Animación cuando se hace hover */
-  .theme-toggle:hover svg {
-    transform: scale(1.1);
+  @media (hover: hover) {
+    .theme-toggle:hover svg {
+      transform: scale(1.1);
+    }
   }
 
-  @media (max-width: 600px) {
+  @media (max-width: 480px) {
     .theme-toggle {
       width: 44px;
       height: 44px;

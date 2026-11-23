@@ -16,22 +16,35 @@ const { links = [
 <style>
 .main-nav {
   display: flex;
-  gap: 2rem;
+  flex-wrap: wrap;
   justify-content: center;
+  gap: 0.5rem clamp(0.75rem, 2.5vw, 3rem);
   background: var(--color-background);
-  padding: 1rem 0;
-  font-size: 1.1rem;
-  position: sticky;
-  top: 0;
-  z-index: 10;
+  padding: 0.5rem;
+  font-size: clamp(0.9rem, 0.85rem + 0.2vw, 1.1rem);
+  position: static;
 }
 .main-nav a {
   color: var(--color-primary);
   text-decoration: none;
   font-weight: 500;
+  padding: 0.5rem 0.25rem;
   transition: color 0.2s;
 }
 .main-nav a:hover {
   color: var(--color-text);
+}
+@media (min-width: 481px) {
+  .main-nav {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    padding: 1rem 3.5rem;
+  }
+}
+@media (max-height: 500px) and (orientation: landscape) {
+  .main-nav {
+    padding-block: 0.25rem;
+  }
 }
 </style>
