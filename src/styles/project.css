@@ -73,7 +73,7 @@
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  background: linear-gradient(90deg, var(--color-btn-primary) 0%, var(--color-primary) 100%);
+  background: linear-gradient(90deg, var(--color-btn-primary) 0%, var(--color-btn-hover) 100%);
   color: white;
   padding: 0.8rem 1.5rem;
   border-radius: var(--border-radius);

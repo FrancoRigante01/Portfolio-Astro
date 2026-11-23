@@ -8,6 +8,7 @@
   --color-border: #2d3442;
   --color-btn-primary: #0A66C2;
   --color-btn-hover: #084b8a;
+  --color-link-hover: #fff;
   --font-family: 'Inter', "Helvetica Neue", Helvetica, Arial, sans-serif;
   --font-size-base: 16px;
   --border-radius: 6px;
@@ -25,6 +26,7 @@
   --color-border: #dee2e6;
   --color-btn-primary: #0A66C2;
   --color-btn-hover: #084b8a;
+  --color-link-hover: #084b8a;
   --shadow-light: 0 2px 8px rgba(0,0,0,0.08);
   --shadow-medium: 0 2px 12px rgba(0,0,0,0.12);
   --shadow-heavy: 0 4px 24px rgba(0,0,0,0.15);
