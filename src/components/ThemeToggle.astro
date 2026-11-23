@@ -38,9 +38,11 @@
     if (theme === 'light') {
       sunIcon?.classList.add('hidden');
       moonIcon?.classList.remove('hidden');
+      button?.setAttribute('aria-label', 'Activar modo oscuro');
     } else {
       sunIcon?.classList.remove('hidden');
       moonIcon?.classList.add('hidden');
+      button?.setAttribute('aria-label', 'Activar modo claro');
     }
   }
 
