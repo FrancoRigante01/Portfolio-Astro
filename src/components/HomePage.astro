@@ -10,11 +10,10 @@ export interface Props {
 
 const { lang } = Astro.props;
 const t = ui[lang];
-const cvHref = lang === 'en' ? '/CV-Franco-Rigante-EN.pdf' : '/CV-Franco-Rigante.pdf';
 const base = lang === 'es' ? '' : '/en';
 ---
 
-<Header className="main-header" animate={true} id="inicio" subtitle={t.subtitle} photoAlt={t.photoAlt} />
+<Header className="main-header" animate={true} id="inicio" subtitle={t.subtitle} photoAlt={t.photoAlt} lang={lang} />
 
 <Nav links={[
   { href: "#inicio", text: t.nav.home },
@@ -29,9 +28,6 @@ const base = lang === 'es' ? '' : '/en';
         <section class="bio">
             <h2>{t.about.heading}</h2>
             <p>{t.about.text}</p>
-            <p class="cv-download">
-                <a href={cvHref} download>{t.about.cv}</a>
-            </p>
         </section>
 
         <section id="servicios">
@@ -88,8 +84,8 @@ const base = lang === 'es' ? '' : '/en';
                     <p>{t.projects.hipnos.text} <a href="https://hipnos.netlify.app/" target="_blank" rel="noopener noreferrer">{t.projects.viewProject}</a></p>
                 </div>
                 <div class="proyecto">
-                    <h3><a href={`${base}/arcade-game`}>{t.projects.games.title}</a></h3>
-                    <p>{t.projects.games.text} <a href="https://mariscalchino.itch.io/" target="_blank" rel="noopener noreferrer">{t.projects.viewProfile}</a></p>
+                    <h3><a href={`${base}/objetivos`}>{t.projects.objetivos.title}</a></h3>
+                    <p>{t.projects.objetivos.text} <a href="https://github.com/FrancoRigante01/Objetivos" target="_blank" rel="noopener noreferrer">{t.projects.viewCode}</a></p>
                 </div>
             </div>
         </section>
@@ -158,22 +154,6 @@ section[id] {
   grid-template-columns: repeat(auto-fit, minmax(min(220px, 100%), 1fr));
   gap: clamp(1rem, 3vw, 1.5rem);
   margin-top: 1rem;
-}
-.cv-download {
-  margin-top: 1rem;
-  margin-bottom: 0;
-}
-.cv-download a {
-  display: inline-block;
-  background: var(--color-primary);
-  color: var(--color-background);
-  padding: 0.5rem 1rem;
-  border-radius: var(--border-radius);
-  font-weight: 500;
-  text-decoration: none;
-}
-.cv-download a:hover {
-  opacity: 0.85;
 }
 .servicios-cta {
   margin-top: 1.5rem;

@@ -1,0 +1,96 @@
+---
+import ProjectLayout from "../layouts/ProjectLayout.astro";
+import ProjectGallery from "../components/ProjectGallery.astro";
+---
+
+<ProjectLayout
+    title="Objetivos | Franco Rigante"
+    description="Aplicación web para organizar objetivos, tareas y recordatorios personales, hecha con Angular y sin necesidad de servidor."
+>
+    <h2>Objetivos</h2>
+    <p>
+        Una aplicación web para organizar objetivos, tareas y recordatorios
+        personales. Todos los datos se guardan en el navegador, así que no
+        necesita cuenta, servidor ni base de datos.
+    </p>
+
+    <ProjectGallery
+        images={[
+            {
+                src: "/assets/objetivos/vista-principal.PNG",
+                alt: "Vista principal de la aplicación Objetivos",
+                caption: "Vista principal",
+            },
+            {
+                src: "/assets/objetivos/carga-objetivo.PNG",
+                alt: "Formulario para crear un nuevo objetivo en la aplicación Objetivos",
+                caption: "Crear un objetivo",
+            },
+            {
+                src: "/assets/objetivos/recordatorios.PNG",
+                alt: "Sección de recordatorios de la aplicación Objetivos",
+                caption: "Recordatorios",
+            },
+        ]}
+    />
+
+    <h3>Características principales</h3>
+    <div class="project-features">
+        <div class="feature-card">
+            <h4>🎯 Objetivos y subtareas</h4>
+            <p>
+                Objetivos con título, descripción, fecha límite y prioridad,
+                divididos en subtareas anidadas que se pueden colapsar.
+            </p>
+        </div>
+        <div class="feature-card">
+            <h4>📋 Listas inteligentes</h4>
+            <p>
+                Mi día, Importantes, Planificadas y Completadas, con contador
+                de pendientes en la barra lateral, además de listas propias.
+            </p>
+        </div>
+        <div class="feature-card">
+            <h4>⏰ Recordatorios</h4>
+            <p>
+                Recordatorios con fecha y hora en su propia sección, con los
+                vencidos marcados para que no se pasen por alto.
+            </p>
+        </div>
+        <div class="feature-card">
+            <h4>💾 Exportar e importar</h4>
+            <p>
+                Los datos se pueden exportar e importar en un archivo JSON,
+                para llevarlos a otro navegador o hacer una copia de seguridad.
+            </p>
+        </div>
+    </div>
+
+    <h3>Tecnologías utilizadas</h3>
+    <div class="tech-stack">
+        <span class="tech-tag">Angular</span>
+        <span class="tech-tag">TypeScript</span>
+        <span class="tech-tag">Tailwind CSS</span>
+        <span class="tech-tag">Vitest</span>
+        <span class="tech-tag">localStorage</span>
+    </div>
+
+    <div class="project-links">
+        <a
+            href="https://objetivos-app.netlify.app/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="project-link"
+        >
+            🚀 Probar la aplicación
+        </a>
+        <a
+            href="https://github.com/FrancoRigante01/Objetivos"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="project-link"
+        >
+            📂 Ver código en GitHub
+        </a>
+    </div>
+</ProjectLayout>

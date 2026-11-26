@@ -1,0 +1,98 @@
+---
+import ProjectLayout from "../../layouts/ProjectLayout.astro";
+import ProjectGallery from "../../components/ProjectGallery.astro";
+---
+
+<ProjectLayout
+    lang="en"
+    title="Objetivos | Franco Rigante"
+    description="Web application to organize personal goals, tasks and reminders, built with Angular and without the need for a server."
+>
+    <h2>Objetivos</h2>
+    <p>
+        A web application to organize personal goals, tasks and reminders. All
+        data is stored in the browser, so no account, server or database is
+        needed.
+    </p>
+
+    <ProjectGallery
+        heading="Project screenshots"
+        images={[
+            {
+                src: "/assets/objetivos/vista-principal.PNG",
+                alt: "Main view of the Objetivos application",
+                caption: "Main view",
+            },
+            {
+                src: "/assets/objetivos/carga-objetivo.PNG",
+                alt: "Form for creating a new goal in the Objetivos application",
+                caption: "Creating a goal",
+            },
+            {
+                src: "/assets/objetivos/recordatorios.PNG",
+                alt: "Reminders section of the Objetivos application",
+                caption: "Reminders",
+            },
+        ]}
+    />
+
+    <h3>Main features</h3>
+    <div class="project-features">
+        <div class="feature-card">
+            <h4>🎯 Goals and subtasks</h4>
+            <p>
+                Goals with title, description, due date and priority, split
+                into nested subtasks that can be collapsed.
+            </p>
+        </div>
+        <div class="feature-card">
+            <h4>📋 Smart lists</h4>
+            <p>
+                My Day, Important, Planned and Completed, with a pending counter
+                in the sidebar, plus custom lists.
+            </p>
+        </div>
+        <div class="feature-card">
+            <h4>⏰ Reminders</h4>
+            <p>
+                Reminders with date and time in their own section, with overdue
+                ones highlighted so they don't go unnoticed.
+            </p>
+        </div>
+        <div class="feature-card">
+            <h4>💾 Export and import</h4>
+            <p>
+                Data can be exported and imported as a JSON file, to move it to
+                another browser or to make a backup.
+            </p>
+        </div>
+    </div>
+
+    <h3>Technologies used</h3>
+    <div class="tech-stack">
+        <span class="tech-tag">Angular</span>
+        <span class="tech-tag">TypeScript</span>
+        <span class="tech-tag">Tailwind CSS</span>
+        <span class="tech-tag">Vitest</span>
+        <span class="tech-tag">localStorage</span>
+    </div>
+
+    <div class="project-links">
+        <a
+            href="https://objetivos-app.netlify.app/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="project-link"
+        >
+            🚀 Try the application
+        </a>
+        <a
+            href="https://github.com/FrancoRigante01/Objetivos"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="project-link"
+        >
+            📂 View code on GitHub
+        </a>
+    </div>
+</ProjectLayout>

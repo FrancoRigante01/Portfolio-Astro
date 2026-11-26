@@ -18,7 +18,7 @@ const homeHref = lang === 'es' ? '/' : '/en/';
 ---
 
 <Layout title={title} description={description} lang={lang} showLanguageSwitcher={true}>
-	<Header className="main-header" animate={true} id="inicio" subtitle={t.subtitle} photoAlt={t.photoAlt} />
+	<Header className="main-header" animate={true} id="inicio" subtitle={t.subtitle} photoAlt={t.photoAlt} lang={lang} />
 	<Nav links={[
 		{ href: homeHref, text: t.nav.home },
 		{ href: "#proyecto", text: t.nav.project }

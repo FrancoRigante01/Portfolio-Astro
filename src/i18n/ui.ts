@@ -59,6 +59,7 @@ const es = {
     heading: 'Proyectos Destacados',
     viewProject: 'Ver proyecto',
     viewProfile: 'Ver perfil',
+    viewCode: 'Ver código',
     pokemon: {
       title: 'Pokémon App',
       text: 'Lista interactiva de Pokémon con filtrado, paginación y autenticación de usuarios.',
@@ -67,9 +68,9 @@ const es = {
       title: 'Hipnos',
       text: 'Intérprete de sueños con reconocimiento de voz y sistema de logros.',
     },
-    games: {
-      title: 'Videojuegos en Itch.io',
-      text: 'Desarrollo de videojuegos independientes.',
+    objetivos: {
+      title: 'Objetivos',
+      text: 'Aplicación web para organizar objetivos, tareas y recordatorios personales, sin necesidad de servidor.',
     },
   },
   skills: {
@@ -150,6 +151,7 @@ const en: typeof es = {
     heading: 'Featured Projects',
     viewProject: 'View project',
     viewProfile: 'View profile',
+    viewCode: 'View code',
     pokemon: {
       title: 'Pokémon App',
       text: 'Interactive Pokémon list with filtering, pagination and user authentication.',
@@ -158,9 +160,9 @@ const en: typeof es = {
       title: 'Hipnos',
       text: 'Dream interpreter with voice recognition and an achievement system.',
     },
-    games: {
-      title: 'Games on Itch.io',
-      text: 'Independent video game development.',
+    objetivos: {
+      title: 'Objetivos',
+      text: 'Web application to organize personal goals, tasks and reminders, without the need for a server.',
     },
   },
   skills: {
